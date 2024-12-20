@@ -20,6 +20,7 @@ const Meal = () => {
 
   return (
     <div className="font-sans">
+        <div  className="flex justify-center gap-4 mt-6  font-extrabold text-orange-600 hover:bg-gray-500 duration-200  ">Search For Dish   </div>
       <div className="flex justify-center gap-4 mt-6">
         <input
           type="text"
@@ -30,7 +31,7 @@ const Meal = () => {
         />
         <button
           onClick={myFun}
-          className="w-24 bg-orange-500 text-white text-lg font-medium rounded-lg py-2 hover:bg-orange-600"
+          className="w-24 bg-orange-500 text-white text-lg font-medium rounded-lg py-2 hover:bg-orange-600 "
         >
           Search
         </button>
@@ -134,3 +135,18 @@ export default Meal;
 // };
 
 // export default Meal;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

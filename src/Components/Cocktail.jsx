@@ -12,7 +12,7 @@ const Cocktail = () => {
     try {
       const response = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${search}`);
       const jsonData = await response.json();
-      setData(jsonData.drinks); // Corrected the property to 'drinks'
+      setData(jsonData.drinks); 
     } catch (error) {
       console.error('Error fetching data:', error);
     }
@@ -20,6 +20,7 @@ const Cocktail = () => {
 
   return (
     <div className="font-sans">
+     <div  className="flex justify-center gap-4 mt-6  font-extrabold hover:bg-gray-500 duration-200  ">Search For Cocktail  </div>
       <div className="flex justify-center gap-4 mt-6">
         <input
           type="text"
@@ -30,7 +31,7 @@ const Cocktail = () => {
         />
         <button
           onClick={myFun}
-          className="w-24 bg-orange-500 text-white text-lg font-medium rounded-lg py-2 hover:bg-orange-600"
+          className="w-24 bg-black text-white text-lg font-medium rounded-lg py-2 hover:bg-black duration-200"
         >
           Search
         </button>
@@ -39,12 +40,12 @@ const Cocktail = () => {
         {data ? (
           data.map((drink) => (
             <div
-              key={drink.idDrink} // Corrected key to use 'idDrink'
+              key={drink.idDrink} 
               className="w-72 h-auto text-center bg-white shadow-lg rounded-lg"
             >
               <img
-                src={drink.strDrinkThumb} // Corrected to 'strDrinkThumb'
-                alt={drink.strDrink} // Corrected to 'strDrink'
+                src={drink.strDrinkThumb} 
+                alt={drink.strDrink} 
                 className="w-full h-60 object-cover rounded-t-lg"
               />
               <div className="px-4 py-2">
@@ -57,7 +58,7 @@ const Cocktail = () => {
                 </p>
                 <div className="mt-5">
                   <a
-                    className="bg-orange-500 text-white text-sm font-medium px-4 py-2 rounded-lg hover:bg-orange-600"
+                    className="bg-black text-white text-sm font-medium px-4 py-2 rounded-lg hover:bg-black"
                     href={drink.strVideo || '#'}
                     target="_blank"
                     rel="noopener noreferrer"
